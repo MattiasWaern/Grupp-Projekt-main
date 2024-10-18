@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'mixins';
+@import 'variables';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    @include flex-center;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    background-color: pink;
+    position: sticky;
+    top: 0;
+
+    .logo {
+        @include flex-center;
+        padding: 1px;
+        width: 30%;
+    }
+
+    .menu {
+        width: 40%;
+
+        
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            @include flex-center;
+            list-style-type: none;
+
+            li {
+                margin: 5%;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer {
+    @include flex-center;
+    height: 5%;
+    width: 100%;
+    background-color: pink;
+    position: sticky;
+    bottom: 0;
+}
+
+main {
+    @include flex-center;
+    height: 100%;
+    width: 100%;
+}
